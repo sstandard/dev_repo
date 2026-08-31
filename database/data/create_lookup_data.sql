@@ -8,8 +8,12 @@
 -- Date         | Changed by | Description
 -- 27/08/2026   | Steve S    | Initial creation of lookup data for job statuses, contract types, and working types.
 
--- Job Statuses
+-- Delete from the lookup tables to ensure a clean slate before inserting new data
+DELETE FROM job_status;
+DELETE FROM job_contract_type;
+DELETE FROM job_working_type;
 
+-- Job Statuses
 INSERT INTO job_status (status_name, display_order)
 VALUES ('Found', 1);
 
