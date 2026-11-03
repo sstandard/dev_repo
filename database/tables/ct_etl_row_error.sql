@@ -5,6 +5,16 @@
 -- Purpose: Captures detailed error information at the record level so ETL
 --          issues can be tracked, corrected, and reported accurately.
 --
+-- This allows a single customer record to have multiple validation errors.
+
+-- For example:
+
+-- Staging ID	Rule	     Error
+-- 101	        SURNAME_REQ	 Missing surname
+-- 101	        DOB_REQ	     Missing DOB
+-- 102	        EMAIL_REGEX	 Invalid email
+-- 103	        DOB_FUTURE	 DOB is in future
+--
 -- History:
 -- 2026-11-02 - Initial creation for row-level ETL error tracking.
 --
